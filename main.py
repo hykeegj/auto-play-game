@@ -7,9 +7,9 @@ import time
 # 안전모드 설정
 pag.FAILSAFE = True
 
-delay = 0.1
+delay = 0.15
 duration = 0
-confidence = 0.3
+confidence = 0.5
 gray_1 = cv2.IMREAD_GRAYSCALE
 
 # 캐릭터가 왼쪽을 바라보고 있을 때 True, 오른쪽을 바라보고 있을 때 False (기본값 : True)
@@ -30,21 +30,22 @@ return_button_center = pag.locateCenterOnScreen(return_button_img, grayscale=Tru
 
 # 회전 트리거 이미지 영역 좌표값 계산하기
 # 캐릭터가 왼쪽을 바라보고 있을 때
-left_trigger_x = up_button_center.x - 278
-left_trigger_y = up_button_center.y - 241
+left_trigger_x = up_button_center.x - 365
+left_trigger_y = up_button_center.y - 322
 
 # 캐릭터가 오른쪽을 바라보고 있을 때
-right_trigger_x = up_button_center.x - 111
-right_trigger_y = up_button_center.y - 240
+right_trigger_x = up_button_center.x - 147
+right_trigger_y = up_button_center.y - 322
 
 # 게임 시작시 무조건 첫 시작으로 등산버튼을 누름
 print('스타트!, 등산!')
 pag.click(up_button_center)
+time.sleep(0.3)
 
 while True:
     time.sleep(delay)
-    set_left_trigger_1 = pag.locateOnScreen(return_block_img, region=(left_trigger_x, left_trigger_y, 55, 30), grayscale=True, confidence=confidence)
-    set_left_trigger_2 = pag.locateOnScreen(return_block_img, region=(right_trigger_x, right_trigger_y, 55, 30), grayscale=True, confidence=confidence)
+    set_left_trigger_1 = pag.locateOnScreen(return_block_img, region=(left_trigger_x, left_trigger_y, 75, 35), grayscale=True, confidence=confidence)
+    set_left_trigger_2 = pag.locateOnScreen(return_block_img, region=(right_trigger_x, right_trigger_y, 75, 35), grayscale=True, confidence=confidence)
 
     print(trigger_bool)
     print(set_left_trigger_1)

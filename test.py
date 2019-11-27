@@ -11,12 +11,12 @@ up_button_center = pag.locateCenterOnScreen(up_button_img, grayscale=True, confi
 pag.moveTo(up_button_center)
 print(up_button_center)
 
-pag.moveTo(x=up_button_center.x - 278, y=up_button_center.y - 241, duration=0.5)
+pag.moveTo(x=up_button_center.x - 365, y=up_button_center.y - 323, duration=0.5)
 pag.moveTo(x=up_button_center.x - 227, y=up_button_center.y - 216, duration=0.5)
 
-pag.moveTo(x=up_button_center.x - 111, y=up_button_center.y - 240, duration=0.5)
+pag.moveTo(x=up_button_center.x - 147, y=up_button_center.y - 322, duration=0.5)
 pag.moveTo(x=up_button_center.x - 64, y=up_button_center.y - 216, duration=0.5)
 
-# 2023 1068
-# 1912 828
-# 1959 852
+# 2120 1147
+# 1755 824 / 1826 855
+# 1973 825 / 2047 859
