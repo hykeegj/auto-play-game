@@ -1,7 +1,6 @@
 # LDPlayer ver 3.76 모바일 해상도 720 x 1280 320DPI 기준
 import pyautogui as pag
 import cv2
-import sys
 import time
 
 # 안전모드 설정
